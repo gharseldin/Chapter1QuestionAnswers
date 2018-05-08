@@ -8,11 +8,10 @@
 
 import Foundation
 
-print("please enter some data:")
+// Question R-1.1
+let simpleTypes = SimpleTypes.captureValues()
+simpleTypes.printValues()
 
-if let response = readLine(){
-    print("output :", response)
-}else {
-    print("Nothing")
-}
+// Question R-1.2
+
 
