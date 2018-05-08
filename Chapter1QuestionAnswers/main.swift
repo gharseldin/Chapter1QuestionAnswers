@@ -8,5 +8,11 @@
 
 import Foundation
 
-print("Hello, World!")
+print("please enter some data:")
+
+if let response = readLine(){
+    print("output :", response)
+}else {
+    print("Nothing")
+}
 
