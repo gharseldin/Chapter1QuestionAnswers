@@ -7,10 +7,10 @@
 //
 
 import Foundation
-
+/*
 // Question R-1.1
-//let simpleTypes = SimpleTypes.captureValues()
-//simpleTypes.printValues()
+let simpleTypes = SimpleTypes.captureValues()
+simpleTypes.printValues()
 
 // Question R-1.2
 var arrayOfStructs = GameEntryStruct.getStructGameEntries(ofSize: 5)
@@ -25,4 +25,16 @@ print(arrayOfStructs)
 print(arrayOfClasses)
 // With Class the reference is maintained and any changes to one array will reflect on the other
 // With Structs a complete new copy is formed and completely dissociated from the previous array
+
+// Question R-1.3
+func areMultiples(value1 val1: Int64, value2 val2: Int64) ->Bool {
+    if (val1 % val2 == 0) || (val2 % val1 == 0){
+        return true
+    }
+    return false
+}
+print(areMultiples(value1: 3, value2: 16))
+ 
+*/
+
 
