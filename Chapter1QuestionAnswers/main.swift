@@ -69,6 +69,13 @@ func getSumOfOddPositiveIntegers(upto num: Int) -> Int {
     return num-1 + getSumOfOddPositiveIntegers(upto: num-3)
 }
 print(getSumOfOddPositiveIntegers(upto: 11))
+
+// Question R-1.7
+func getSumOfPositiveSquares(upToAndIncluding num: Int) -> Int {
+    if num == 1{
+        return 1
+    }
+    return num*num + getSumOfPositiveSquares(upToAndIncluding: num-1)
+}
+print(getSumOfPositiveSquares(upToAndIncluding: 4))
 */
-
-
