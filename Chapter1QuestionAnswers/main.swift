@@ -35,7 +35,7 @@ func areMultiples(value1 val1: Int64, value2 val2: Int64) ->Bool {
 }
 print(areMultiples(value1: 3, value2: 16))
 
-// QuestionR-1.4
+// Question R-1.4
 func isEven(number num: Int) -> Bool {
     var str = String(num, radix: 2)
     let index = str.index(before: str.endIndex)
@@ -47,6 +47,16 @@ func isEven(number num: Int) -> Bool {
     return true
 }
 print(isEven(number: 19))
+
+
+// Question R-1.5
+func getSumOfPositiveIntegers(upToAndIncluding num: Int) -> Int {
+    if num == 1{
+        return 1
+    }
+    return num + getSumOfPositiveIntegers(upToAndIncluding: num-1)
+}
+print(getSumOfPositiveIntegers(upToAndIncluding: 6))
 */
 
 
