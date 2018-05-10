@@ -34,7 +34,19 @@ func areMultiples(value1 val1: Int64, value2 val2: Int64) ->Bool {
     return false
 }
 print(areMultiples(value1: 3, value2: 16))
- 
+
+// QuestionR-1.4
+func isEven(number num: Int) -> Bool {
+    var str = String(num, radix: 2)
+    let index = str.index(before: str.endIndex)
+    str = String(str[index...])
+    print(str)
+    if str == "1"{
+        return false
+    }
+    return true
+}
+print(isEven(number: 19))
 */
 
 
