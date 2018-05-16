@@ -78,7 +78,9 @@ class CreditCard: CustomStringConvertible{
     }
     
     func makePayment(amount: Double){
-        _balance -= amount
+        if(amount > 0){
+            _balance -= amount
+        }
     }
     
     func updateCreditLimit(byAmount amount: Int){
