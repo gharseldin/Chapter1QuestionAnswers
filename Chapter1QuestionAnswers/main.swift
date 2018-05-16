@@ -123,4 +123,15 @@ print(myFlower)
 myFlower.name = "Red Rose"
 print(myFlower)
 */
-
+// Question R-1.11
+let myCreditCard = CreditCard(customer: "Amr", bank: "Bank of America", account: "1234567890", limit: 300, balance: 55.67)
+print(myCreditCard)
+print(myCreditCard.charge(price: 100.93))
+print(myCreditCard)
+// Transaction exceeds limit and does not go through
+print(myCreditCard.charge(price: 150.44))
+print(myCreditCard)
+// Increase limit and try again
+myCreditCard.updateCreditLimit(byAmount: 100)
+print(myCreditCard.charge(price: 150.44))
+print(myCreditCard)
