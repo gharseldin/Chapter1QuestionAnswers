@@ -78,4 +78,27 @@ func getSumOfPositiveSquares(upToAndIncluding num: Int) -> Int {
     return num*num + getSumOfPositiveSquares(upToAndIncluding: num-1)
 }
 print(getSumOfPositiveSquares(upToAndIncluding: 4))
+
+// Question R-1.8
+func numberOfVowels(in str: String) -> Int {
+    var numberOfVowels = 0
+    for char in str {
+        if isVowel(char){
+            numberOfVowels += 1
+        }
+    }
+    return numberOfVowels
+}
+
+func isVowel( _ char : Character) -> Bool {
+    if char == "a" || char == "A" ||
+        char == "o" || char == "O" ||
+        char == "i" || char == "I" ||
+        char == "e" || char == "E" ||
+        char == "u" || char == "U"{
+        return true
+    }
+    return false
+}
+print(numberOfVowels(in: "Amr Gharseldin"))
 */
