@@ -102,7 +102,7 @@ func isVowel( _ char : Character) -> Bool {
 }
 print(numberOfVowels(in: "Amr Gharseldin"))
 
-// Question R-1.8
+// Question R-1.9
 
 func removePunctuation(from str:String) -> String {
     let output = str.filter({ char in
@@ -116,5 +116,11 @@ func removePunctuation(from str:String) -> String {
 }
 
 print(removePunctuation(from: "let's go man, its late! Ok."))
+
+// Question R-1.10
+let myFlower = Flower(name: "Rose", numberOfPetals: 25, price: 12.30)
+print(myFlower)
+myFlower.name = "Red Rose"
+print(myFlower)
 */
 
