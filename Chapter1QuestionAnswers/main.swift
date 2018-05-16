@@ -101,4 +101,20 @@ func isVowel( _ char : Character) -> Bool {
     return false
 }
 print(numberOfVowels(in: "Amr Gharseldin"))
+
+// Question R-1.8
+
+func removePunctuation(from str:String) -> String {
+    let output = str.filter({ char in
+        var returnState : Bool = false
+        if char != "'" && char != "." && char != "," && char != "!"{
+            returnState = true
+        }
+        return returnState
+    })
+    return output
+}
+
+print(removePunctuation(from: "let's go man, its late! Ok."))
 */
+
