@@ -122,7 +122,7 @@ let myFlower = Flower(name: "Rose", numberOfPetals: 25, price: 12.30)
 print(myFlower)
 myFlower.name = "Red Rose"
 print(myFlower)
-*/
+
 // Question R-1.11
 let myCreditCard = CreditCard(customer: "Amr", bank: "Bank of America", account: "1234567890", limit: 300, balance: 55.67)
 print(myCreditCard)
@@ -135,3 +135,36 @@ print(myCreditCard)
 myCreditCard.updateCreditLimit(byAmount: 100)
 print(myCreditCard.charge(price: 150.44))
 print(myCreditCard)
+
+ // Question R-1.12
+ // Done in class
+ 
+ // Question R-1.13
+
+func testRunCreditCards(){
+    var creditCardWallet = [CreditCard]()
+    creditCardWallet.append(CreditCard(customer: "Amr", bank: "HSBC", account: "1234", limit: 5000))
+    creditCardWallet.append(CreditCard(customer: "Adam", bank: "Citi", account: "4567", limit: 3500))
+    creditCardWallet.append(CreditCard(customer: "Shawn", bank: "Barclays", account: "7890", limit: 2500, balance: 300))
+    
+    for i in 1...100{
+        print("--- iteration \(i) ----")
+        if !creditCardWallet[0].charge(price: 3 * Double(i)){
+            break
+        }
+        if !creditCardWallet[1].charge(price: 2 * Double(i)){
+            break
+        }
+        if !creditCardWallet[2].charge(price: Double(i)){
+            break
+        }
+    }
+
+    for creditCard in creditCardWallet {
+        print(creditCard)
+    }
+}
+// The first credit card runs out of limit first
+testRunCreditCards()
+ */
+

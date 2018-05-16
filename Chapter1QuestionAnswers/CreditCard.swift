@@ -31,7 +31,7 @@ class CreditCard: CustomStringConvertible{
     private var _limit: Int
     internal var _balance: Double
     
-    init(customer: String, bank: String, account: String, limit: Int, balance: Double){
+    init(customer: String, bank: String, account: String, limit: Int, balance: Double = 0.0){
         _customer = customer
         _bank = bank
         _account = account
