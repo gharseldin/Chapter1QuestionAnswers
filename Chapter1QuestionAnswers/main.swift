@@ -195,4 +195,39 @@ func minmax(inArray a:[Int])-> (min: Int, max: Int){
     return (min, max)
 }
 print(minmax(inArray: [5,6,7,4,8,3,2,1,9,8,11,0,4]))
+ 
+// Question C-1.15
+func mathematicalFormula()->(firstEquation: Bool, secondEquation: Bool, thridEquation: Bool){
+    var a: Int?
+    var b: Int?
+    var c: Int?
+    
+    var returnTuple: (firstEquation: Bool, secondEquation: Bool, thridEquation: Bool) = (false, false, false)
+    print("Enter number a:")
+    if let _a = readLine(), let intA = Int(_a){
+        a = intA
+    }
+    print("Enter number b:")
+    if let _b = readLine() , let intB = Int(_b){
+        b = intB
+    }
+    print("Enter number c:")
+    if let _c = readLine(){
+        if let intC = Int(_c){
+            c = intC
+        }
+    }
+    if(a! + b! == c!){
+        returnTuple.firstEquation = true
+    }
+    if(b! - c! == a!){
+        returnTuple.secondEquation = true
+    }
+    if(a! * b! == c!){
+        returnTuple.thridEquation = true
+    }
+    return returnTuple
+}
+print(mathematicalFormula())
 */
+
