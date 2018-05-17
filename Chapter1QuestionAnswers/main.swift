@@ -8,6 +8,7 @@
 
 import Foundation
 /*
+ // ------------------------------- Reinforcement Questions ----------------------------------------
 // Question R-1.1
 let simpleTypes = SimpleTypes.captureValues()
 simpleTypes.printValues()
@@ -166,5 +167,32 @@ func testRunCreditCards(){
 }
 // The first credit card runs out of limit first
 testRunCreditCards()
- */
 
+// ------------------------------- Creativity Questions ----------------------------------------
+// Question C-1.14
+func reverse (array a: [Int])-> [Int]{
+    var b = [Int]()
+    for i in 0..<a.count{
+        b.append(a[a.count-1-i])
+    }
+    return b
+}
+
+print(reverse(array: [1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+// Question C-1.15
+func minmax(inArray a:[Int])-> (min: Int, max: Int){
+    var min: Int = Int.max
+    var max: Int = Int.min
+    for i in a {
+        if(i<min){
+            min = i
+        }
+        if(i>max){
+            max = i
+        }
+    }
+    return (min, max)
+}
+print(minmax(inArray: [5,6,7,4,8,3,2,1,9,8,11,0,4]))
+*/
