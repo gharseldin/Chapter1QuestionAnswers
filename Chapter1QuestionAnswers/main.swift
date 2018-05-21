@@ -242,7 +242,7 @@ func areTwoDistinctPairsProductEven(in array: [Int])-> Bool {
     return false
 }
 print(areTwoDistinctPairsProductEven(in: [1,1, 3, 5 , 5, 2]))
-*/
+ 
 // Question C-1.18
 func norm(ofVector vector: [Int], toThePower power: Int) -> Decimal {
     var sumOfSquares: Decimal = 0
@@ -253,3 +253,43 @@ func norm(ofVector vector: [Int], toThePower power: Int) -> Decimal {
     return result
 }
 print(norm(ofVector: [3,4], toThePower: 2))
+
+// Question C-1.19
+func divisors () -> Int {
+    var divisions = 0
+    print ("Enter a number greater than 2")
+    if let input = readLine(){
+        if var num = Int(input) {
+            while (num >= 2){
+                num /= 2
+                divisions += 1
+            }
+        }
+    }
+    return divisions
+}
+
+print(divisors())
+
+// Question C-1.20
+func checkDistinct (array ar:[Float]) -> Bool {
+    for i in 0..<ar.count-1{
+        for j in (i+1)..<ar.count{
+            print("comparing \(ar[i]) & \(ar[j])")
+            if ar[i] == ar[j]{
+                return false
+            }
+        }
+    }
+    return true
+}
+
+print(checkDistinct(array: [1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.6]))
+*/
+
+ 
+ 
+ 
+ 
+ 
+ 
