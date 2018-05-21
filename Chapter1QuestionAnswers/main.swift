@@ -196,7 +196,7 @@ func minmax(inArray a:[Int])-> (min: Int, max: Int){
 }
 print(minmax(inArray: [5,6,7,4,8,3,2,1,9,8,11,0,4]))
  
-// Question C-1.15
+// Question C-1.16
 func mathematicalFormula()->(firstEquation: Bool, secondEquation: Bool, thridEquation: Bool){
     var a: Int?
     var b: Int?
@@ -229,5 +229,27 @@ func mathematicalFormula()->(firstEquation: Bool, secondEquation: Bool, thridEqu
     return returnTuple
 }
 print(mathematicalFormula())
-*/
 
+// Question C-1.17
+func areTwoDistinctPairsProductEven(in array: [Int])-> Bool {
+    for i in array {
+        for j in array[i...]{
+            if ((i * j) % 2) == 0{
+                return true
+            }
+        }
+    }
+    return false
+}
+print(areTwoDistinctPairsProductEven(in: [1,1, 3, 5 , 5, 2]))
+*/
+// Question C-1.18
+func norm(ofVector vector: [Int], toThePower power: Int) -> Decimal {
+    var sumOfSquares: Decimal = 0
+    for i in vector {
+        sumOfSquares += pow(Decimal(i), power)
+    }
+    let result = pow(sumOfSquares, 1/power)
+    return result
+}
+print(norm(ofVector: [3,4], toThePower: 2))
