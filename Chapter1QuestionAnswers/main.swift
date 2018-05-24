@@ -285,10 +285,24 @@ func checkDistinct (array ar:[Float]) -> Bool {
 }
 
 print(checkDistinct(array: [1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.6]))
-*/
 
- 
- 
+// Question C-1.21
+func shuffleArray( _ arr: [Int]) -> [Int] {
+    // go through each element
+    var workArray = arr
+    var returnArray: [Int] = [Int]()
+    for _ in 0..<workArray.count {
+        let index = Int(arc4random_uniform(UInt32(workArray.count)))
+        returnArray.append(workArray.remove(at: index))
+    }
+    return returnArray
+}
+
+let intArray = Array(1...52)
+print(shuffleArray(intArray))
+*/
+// Question C-1.22
+
  
  
  
