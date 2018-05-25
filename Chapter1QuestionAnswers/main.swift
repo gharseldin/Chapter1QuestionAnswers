@@ -300,8 +300,26 @@ func shuffleArray( _ arr: [Int]) -> [Int] {
 
 let intArray = Array(1...52)
 print(shuffleArray(intArray))
-*/
+
+// TODO finish later
 // Question C-1.22
+func permutate (_ letters: inout [String]) -> String{
+    var string = String()
+    for i in 0..<letters.count {
+        string += letters.remove(at: i) + permutate(&letters)
+    }
+}
+
+// Question C-1.23
+func dotProduct(of arr1: [Int], and arr2: [Int]) -> [Int] {
+    var result = [Int]()
+    for i in 0..<arr1.count {
+        result.append(arr1[i] * arr2[i])
+    }
+    return result
+}
+print(dotProduct(of: [1, 2, 3, 4, 5], and: [2, 2, 2, 2, 2]))
+*/
 
  
  
